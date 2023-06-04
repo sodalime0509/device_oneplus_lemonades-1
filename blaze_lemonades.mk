@@ -13,6 +13,7 @@ $(call inherit-product, device/oneplus/lemonades/device.mk)
 
 # Inherit some common Blaze stuff.
 $(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 PRODUCT_NAME := blaze_lemonades
 PRODUCT_DEVICE := lemonades
