@@ -12,8 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/lemonades/device.mk)
 
 # Inherit some common Blaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
-$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product, vendor/banana/config/common_full_phone.mk)
+
+#Banandroid Stuff
+BANANA_MAINTAINER := Nacho
+WITH_GAPPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGER_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_EXCLUDE_MATLOG := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := blaze_lemonades
 PRODUCT_DEVICE := lemonades
@@ -21,18 +30,12 @@ PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := LE2101
 
-# Blaze Official Stuff
-BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := dawfukfr
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
+
 TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_BLUR := true
-TARGET_SUPPORTS_QUICK_TAP := true
+
 TARGET_USE_PIXEL_CHARGER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := true
-WITH_GAPPS := true
 
 PRODUCT_SYSTEM_NAME := OnePlus9R
 PRODUCT_SYSTEM_DEVICE := OnePlus9R
